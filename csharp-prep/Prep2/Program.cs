@@ -36,10 +36,25 @@ class Program
             gradeLetter = "F";
         }
         // Code to determine if + or -
-
-
+        string symbol = "";
+        if (!(gradePercentage > 95 || gradeLetter == "F"))  
+            {
+                int gradeRemainder = gradePercentage  % 10;
+                if (gradeRemainder >= 7)
+                {
+                    symbol = "+";
+                }
+                else if(gradeRemainder <= 3)
+                {
+                    symbol = "-";
+                }
+                else
+                {
+                    symbol ="";
+                }
+            }
         // Code that writes either Congrats or Sorry based on Percentage
-        Console.WriteLine($"Your Grade is: {gradeLetter}");
+        Console.WriteLine($"Your Grade is: {gradeLetter}{symbol}");
 
         if (gradePercentage >= 70)
         {
