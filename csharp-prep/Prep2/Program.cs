@@ -4,7 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
+        
+        // Clear Screen
         Console.Clear();
+        // Main Code
         Console.Write("What is your Grade percentage? ");
         string gradeNumber = Console.ReadLine();
 
@@ -32,7 +35,10 @@ class Program
         {
             gradeLetter = "F";
         }
+        // Code to determine if + or -
 
+
+        // Code that writes either Congrats or Sorry based on Percentage
         Console.WriteLine($"Your Grade is: {gradeLetter}");
 
         if (gradePercentage >= 70)
