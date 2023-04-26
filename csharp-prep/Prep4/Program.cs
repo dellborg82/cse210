@@ -56,12 +56,12 @@ class Program
         int lowestNum = listNum[0];
         foreach (int number in listNum)
         {
-            if (number < lowestNum)
+            if (number < lowestNum && number >= 0)
             {
                 lowestNum = number;
             }
         }
-        Console.WriteLine($"The Smallest Number in the list is: {lowestNum}");
+        Console.WriteLine($"The Smallest Positive Number in the list is: {lowestNum}");
     }
 
     
