@@ -52,7 +52,6 @@ class Program
 
         Console.WriteLine($"The Largest Number in the list is: {maxNum}");
 
-        // Need to correct so it gets the lowest positive number closes to 0
         int lowestNum = listNum[0];
         foreach (int number in listNum)
         {
