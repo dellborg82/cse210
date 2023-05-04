@@ -17,6 +17,19 @@
         },
 
         {
+            "name": "Class Diagram Creator",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-sandbox-Sandbox",
+            "program": "${workspaceFolder}/ClassDiagramCreator/bin/Debug/net7.0/Sandbox.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/ClassDiagramCreator",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+
+        {
             "name": "C# Prep 1",
             "type": "coreclr",
             "request": "launch",
