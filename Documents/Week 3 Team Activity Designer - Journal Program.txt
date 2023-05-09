@@ -16,6 +16,21 @@ Behaviors: (Methods or Functions)
 * Quit(): void
 * Entry(): string
 
+Class: Entry (Name of the Class)
+Attributes: (Member Variables)
+* _date : string
+* _listOfEntries : string
+Behaviors: (Methods or Functions)
+* getTime() : string
+Display() : void
+
+Class: Program (Name of the Class)
+Attributes: (Member Variables)
+* _promptAnswer : List<string>
+Behaviors: (Methods or Functions)
+* generatePrompt() : string
+
+
 Bellow you will find the Class Diagram for Journal:
 ----------------------------------------
 | |
@@ -38,14 +53,6 @@ Bellow you will find the Class Diagram for Journal:
 | |
 ----------------------------------------
 
-Class: Entry (Name of the Class)
-Attributes: (Member Variables)
-* _date : string
-* _listOfEntries : string
-Behaviors: (Methods or Functions)
-* getTime() : string
-Display() : void
-
 ----------------------------------------
 |                                      |
 |            Entry              |
@@ -62,11 +69,7 @@ Display() : void
 |                                      |
 ----------------------------------------
 
-Class: Prompt Generator (Name of the Class)
-Attributes: (Member Variables)
-* _listOfPrompts : List<string>
-Behaviors: (Methods or Functions)
-* displayPrompt() : string
+
 
 ----------------------------------------
 |                                      |
@@ -82,12 +85,6 @@ Behaviors: (Methods or Functions)
 |                                      |
 ----------------------------------------
 
-Class: Program (Name of the Class)
-Attributes: (Member Variables)
-* _promptAnswer : List<string>
-Behaviors: (Methods or Functions)
-* generatePrompt() : string
-Bellow you will find the Class Diagram for Program:
 ----------------------------------------
 |                                      |
 |            Program              |
