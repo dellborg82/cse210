@@ -1,0 +1,103 @@
+Files Needed: 
+    Journal.cs
+    Entry.cs
+    PromptGenerator.cs
+
+Class: Journal (Name of the Class)
+Attributes: (Member Variables)
+* _fileName : string
+* _userInput : int
+*_ randomPrompt : string
+* _inputFromUser : string
+Behaviors: (Methods or Functions)
+* Display() : void
+* Loading() : string/void
+* Saving() : string/void
+* Quit(): void
+* Entry(): string
+
+Bellow you will find the Class Diagram for Journal:
+----------------------------------------
+| |
+| Journal |
+| |
+----------------------------------------
+| |
+| _fileName : string |
+| _userInput : int |
+| _ randomPrompt : string |
+| _inputFromUser : string |
+| |
+----------------------------------------
+| |
+| Display() : void |
+| Loading() : string/void |
+| Saving() : string/void |
+| Quit(): void |
+| Entry(): string |
+| |
+----------------------------------------
+
+Class: Entry (Name of the Class)
+Attributes: (Member Variables)
+* _date : string
+* _listOfEntries : string
+Behaviors: (Methods or Functions)
+* getTime() : string
+Display() : void
+
+----------------------------------------
+|                                      |
+|            Entry              |
+|                                      |
+----------------------------------------
+|                                      |
+|            _date : string              |
+|            _listOfEntries : string              |
+|                                      |
+----------------------------------------
+|                                      |
+|            getTime() : string              |
+|            Display() : string              |
+|                                      |
+----------------------------------------
+
+Class: Prompt Generator (Name of the Class)
+Attributes: (Member Variables)
+* _listOfPrompts : List<string>
+Behaviors: (Methods or Functions)
+* displayPrompt() : string
+
+----------------------------------------
+|                                      |
+|            Prompt Generator              |
+|                                      |
+----------------------------------------
+|                                      |
+|            _listOfPrompts  List<string>              |
+|                                      |
+----------------------------------------
+|                                      |
+|            displayPrompt() : string              |
+|                                      |
+----------------------------------------
+
+Class: Program (Name of the Class)
+Attributes: (Member Variables)
+* _promptAnswer : List<string>
+Behaviors: (Methods or Functions)
+* generatePrompt() : string
+Bellow you will find the Class Diagram for Program:
+----------------------------------------
+|                                      |
+|            Program              |
+|                                      |
+----------------------------------------
+|                                      |
+|            _promptAnswer : List<string>              |
+|                                      |
+----------------------------------------
+|                                      |
+|            generatePrompt() : string              |
+|                                      |
+----------------------------------------
