@@ -98,3 +98,11 @@ Bellow you will find the Class Diagram for Journal:
 |            generatePrompt() : string              |
 |                                      |
 ----------------------------------------
+
+
+
+Entry should not have a _listOfEntries that 
+is a string. Instead you should have a Journal 
+should have a _listOfEntries typed 
+like this: List<Entry> _listOfEntries = new List<Entry>();
+Then in Entry only have _date and _entry, not _listOfEntries.
