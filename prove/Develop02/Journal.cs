@@ -52,6 +52,7 @@ public class Journal
         {
             // Find how many entries in the list and display the count
             Console.WriteLine($"There are {_entries.Count} Journal Entries in this Journal!");
+            Console.WriteLine();
             // Display what's in the list _entries
             entry.Display();
             Console.WriteLine();
