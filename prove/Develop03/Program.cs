@@ -20,7 +20,7 @@ class Program
         {
             Console.Clear();
             Console.WriteLine(scriptures[randomScripture].FormScriptureString());
-            Console.WriteLine("");
+            Console.WriteLine();
             Console.WriteLine("Press enter to continue or type 'quit' to finish:");
             input = Console.ReadLine();
             scriptures[randomScripture].HideWords();
