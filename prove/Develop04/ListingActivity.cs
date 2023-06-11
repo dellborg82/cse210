@@ -3,7 +3,7 @@ using System;
 public class ListingActivity : Activity
 {
     private string[] _reflectivePrompts = {
-        "How did you apply the teachings of the gospel in your life today?",
+         "How did you apply the teachings of the gospel in your life today?",
         "How did the Matilda Musical affect you today?",
         "How did you work on your Marriage today?",
         "When have you felt the Holy Ghost this month?",
@@ -12,14 +12,14 @@ public class ListingActivity : Activity
 
     public ListingActivity()
     {
-        SetName("Listing");
-        SetDiscription("TThis activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
+        setName("Listing");
+        setDescription("TThis activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
     }
 
     public void Run()
     {
         GetReady();
-        TimeSpan lenghtTime = TimeSpan.FromSeconds(GetDuration());
+        TimeSpan duration = TimeSpan.FromSeconds(getDuration());
 
         Random randomGenerator = new Random();
 
@@ -30,7 +30,7 @@ public class ListingActivity : Activity
         Console.WriteLine(_reflectivePrompts[randomGenerator.Next(0, _reflectivePrompts.Length)]);
 
         int answerCount = 0;
-        while (DateTime.Now - startTime < lenghtTime)
+        while (DateTime.Now - startTime < duration)
         {
             string answer = Console.ReadLine();
 
@@ -42,6 +42,6 @@ public class ListingActivity : Activity
 
         Console.WriteLine($"You listed {answerCount} items!");
 
-        EndActvity();
+        EndActivity();
     }
 }

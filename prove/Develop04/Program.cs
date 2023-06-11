@@ -8,7 +8,7 @@ class Program
         int numBreathActvitiesDone = 0;
         int numListActvitiesDone = 0;
         int numReflectActvitiesDone = 0;
-        int totalActivities = numBreathActvitiesDone + numListActvitiesDone + numReflectActvitiesDone;
+        int totalActivities = 0;
         while (!isRunning)
         {
             Console.Clear();
@@ -25,25 +25,28 @@ class Program
             {
                 case "1":
                     BreathingActivity breathing = new BreathingActivity();
-                    breathing.StartActvity();
+                    breathing.StartActivity();
                     breathing.Run();
                     numBreathActvitiesDone++;
+                    totalActivities++;
                     break;
                 case "2":
                     ReflectionActivity reflecting = new ReflectionActivity();
-                    reflecting.StartActvity();
+                    reflecting.StartActivity();
                     reflecting.Run();
                     numReflectActvitiesDone++;
+                    totalActivities++;
                     break;
                 case "3":
                     ListingActivity listing = new ListingActivity();
-                    listing.StartActvity();
+                    listing.StartActivity();
                     listing.Run();
                     numListActvitiesDone++;
+                    totalActivities++;
                     break;
                 case "4":
                     Console.WriteLine($"Well Done, you did {numBreathActvitiesDone} Breathing Activities, {numListActvitiesDone} Listing Activities, {numReflectActvitiesDone} Reflection Activities, for a total of {totalActivities} Actvities.");
-                    Console.WriteLine("Thank you for running the Mindfulness Program!");
+                    Console.WriteLine("Thank you for running the Mindfulness Program, Please come again soon!");
                     isRunning = true;
                     break;
                 default:

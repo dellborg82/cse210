@@ -3,7 +3,7 @@ using System;
 public class ReflectionActivity : Activity
 {
     private string[] _reflectivePrompts = {
-        "Think of a time when you did something really difficult, How did you handle it?",
+       "Think of a time when you did something really difficult, How did you handle it?",
         "Reflect on a time when you felt really Happy",
         "If you could change something about your past, What would it be and Why?",
         "What is something you've had to think quite a lot about?",
@@ -25,14 +25,14 @@ public class ReflectionActivity : Activity
 
     public ReflectionActivity()
     {
-        SetName("Reflection");
-        SetDiscription("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
+        setName("Reflection");
+        setDescription("This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
     }
 
     public void Run()
     {
         GetReady();
-        int lenghtTime = GetDuration();
+        int duration = getDuration();
 
         Random randomGenerator = new Random();
 
@@ -53,13 +53,12 @@ public class ReflectionActivity : Activity
 
         Console.Clear();
 
-        while (lenghtTime > 0)
+        while (duration > 0)
         {
             Console.WriteLine(_reflectiveQuestions[randomGenerator.Next(0, _reflectiveQuestions.Length)]);
             DisplaySpinner(5);
-            // Thread.Sleep(5000);
-            lenghtTime -= 5;
+            duration -= 5;
         }
-        EndActvity();
+        EndActivity();
     }
 }

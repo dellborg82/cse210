@@ -2,76 +2,78 @@ using System;
 
 public class Activity
 {
-    protected string _name;
-    protected string _description;
-    protected int _lenghtTime;
-    protected int _spinner;
 
-    public void SetDuration(int lenghtTime)
+    private string _name;
+    private string _description;
+    private int lengthTime;
+    private int spinner;
+
+    public void setDuration(int duration)
     {
-        _lenghtTime = lenghtTime;
+        lengthTime = duration;
     }
-    public int GetDuration()
+
+    public int getDuration()
     {
-        return _lenghtTime;
+        return lengthTime;
     }
-    public void SetDiscription(string description)
-    {
-        _description = description;
-    }
-    public void SetName(string name)
+
+    public void setName(string name)
     {
         _name = name;
     }
-    public void DisplaySpinner(int timeToRun)
+
+    public void setDescription(string description)
+    {
+        _description = description;
+    }
+
+    public void DisplaySpinner(int numSecondsToRun)
     {
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.Start();
-        while (stopwatch.ElapsedMilliseconds / 1000 < timeToRun)
+
+        while (stopwatch.ElapsedMilliseconds / 1000 < numSecondsToRun)
         {
-            _spinner++;
-            switch (_spinner % 4)
+            spinner++;
+            switch (spinner % 4)
             {
-                case 0:
-                    Console.Write("/");
-                    break;
-                case 1:
-                    Console.Write("-");
-                    break;
-                case 2:
-                    Console.Write("\\");
-                    break;
-                case 4:
-                    Console.Write("|");
-                    break;
+                case 0: Console.Write("/"); break;
+                case 1: Console.Write("-"); break;
+                case 2: Console.Write("\\"); break;
+                case 3: Console.Write("|"); break;
             }
-            Console.SetCursorPosition(Console.CursorLeft -1, Console.CursorTop);
+            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
             Thread.Sleep(200);
         }
+
         Console.Write(" ");
     }
-    public void StartActvity()
+
+    public void StartActivity()
     {
         Console.Clear();
-        Console.WriteLine($"Welcome to the {_name} Actvity.");
+        Console.WriteLine($"Welcome to the {_name} Activity.");
         Console.WriteLine();
         Console.WriteLine(_description);
         Console.WriteLine();
-        Console.WriteLine("How long, in Seconds would you like to run the program? ");
-        int.Parse(Console.ReadLine());
+        Console.WriteLine("How long, in seconds, would you like for your session?");
+        int.TryParse(Console.ReadLine(), out lengthTime);
     }
+
     public void GetReady()
     {
         Console.Clear();
-        Console.WriteLine("Get Ready...");
+        Console.WriteLine("Get ready...");
         DisplaySpinner(3);
     }
-    public void EndActvity()
+
+    public void EndActivity()
     {
-        Console.WriteLine();
-        Console.WriteLine("Well Done, you have completed the activity!");
+        Console.WriteLine("");
+        Console.WriteLine("Well done!");
         DisplaySpinner(3);
-        Console.WriteLine($"You have completed another {_lenghtTime} Seconds of the {_name} Actvity");
+        Console.WriteLine($"You have completed another {lengthTime} seconds of the {_name}4 activity.");
         DisplaySpinner(3);
     }
 }
