@@ -50,7 +50,7 @@ class Program
                     isRunning = true;
                     break;
                 default:
-                    Console.WriteLine("Invalid choice");
+                    Console.WriteLine("Invalid choice, Please choose between 1-4!");
                     break;
             }
         }

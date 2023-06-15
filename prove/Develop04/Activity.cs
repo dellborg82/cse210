@@ -38,10 +38,18 @@ public class Activity
             spinner++;
             switch (spinner % 4)
             {
-                case 0: Console.Write("/"); break;
-                case 1: Console.Write("-"); break;
-                case 2: Console.Write("\\"); break;
-                case 3: Console.Write("|"); break;
+                case 0: 
+                    Console.Write("/"); 
+                    break;
+                case 1: 
+                    Console.Write("-"); 
+                    break;
+                case 2: 
+                    Console.Write("\\"); 
+                    break;
+                case 3: 
+                    Console.Write("|"); 
+                    break;
             }
             Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
             Thread.Sleep(200);
@@ -73,7 +81,7 @@ public class Activity
         Console.WriteLine("");
         Console.WriteLine("Well done!");
         DisplaySpinner(3);
-        Console.WriteLine($"You have completed another {lengthTime} seconds of the {_name}4 activity.");
+        Console.WriteLine($"You have completed another {lengthTime} seconds of the {_name} activity.");
         DisplaySpinner(3);
     }
 }
