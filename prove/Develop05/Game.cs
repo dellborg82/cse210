@@ -99,12 +99,12 @@ public class Game
     private void ListGoals()
     {
         Console.Clear();
-        Console.WriteLine("The goals are:");
+        Console.WriteLine("The choice for goals are:");
         int index = 0;
         foreach (Goal goal in _goals)
         {
             index++;
-            Console.WriteLine(index + ". " + goal.DisplayGoal());
+            Console.WriteLine($"{index}. {goal.DisplayGoal()} which is worth {goal.GetPoints()} points!");
         }
         Console.WriteLine("Press any key to continue.");
         Console.ReadKey();
@@ -145,7 +145,6 @@ public class Game
             }
             else if (parts[0] == "ChecklistGoal")
             {
-                // ChecklistGoal|Eat breakfast|Healthy meals|10|False|7|0|25
                 ChecklistGoal goal = new ChecklistGoal(parts[1], parts[2], Convert.ToInt32(parts[3]), Convert.ToInt32(parts[5]), Convert.ToInt32(parts[6]));
                 _goals.Add(goal);
             }
@@ -167,12 +166,12 @@ public class Game
         int choice = Convert.ToInt32(Console.ReadLine());
         if (choice > 0 && choice <= _goals.Count)
         {
-            _goals[choice - 1].IsComplete();
+            _goals[choice - 1].Complete();
             AddPoints(_goals[choice - 1].GetPoints());
         }
         else
         {
-            Console.WriteLine("Invalid choice.");
+            Console.WriteLine("You have entered an invalid choice.");
         }
     }
 
