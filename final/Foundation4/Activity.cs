@@ -1,4 +1,4 @@
-public class Activity{
+public abstract class Activity{
     protected string _activityName;
     protected string _date;
     protected double _length;
@@ -25,33 +25,18 @@ public class Activity{
     }
 
     
-    public virtual double GetDistance()
-    {
-        return 1;
-    }
-    public virtual double GetSpeed()
-    {
-        return 1;
-    }
-    public virtual double GetPace()
-    {
-        return 1;
-    }
+    public abstract double GetDistance();
+   
+    public abstract double GetSpeed();
+    
+    public abstract double GetPace();
+    
     public string GetSummary()
     {
-        double distanceInKm = GetDistance();
-        double speedInKph = GetSpeed();
-        double paceInMinutesPerKm = GetPace();
+        double distanceInMiles = GetDistance();
+        double speedInMPH = GetSpeed();
+        double paceInMinutesPerMile = GetPace();
 
-        return $"{GetDate()} {GetActivityName()} ({Getlength()} min) - Distance: {distanceInKm:F2} km, Speed: {speedInKph:F2} kph, Pace: {paceInMinutesPerKm:F2} min/km";
+        return $"Date of Actvitiy: {GetDate()}, Actvity Name: {GetActivityName()}, Length of Activity: ({Getlength()} min) - Total Distance during Actvity: {distanceInMiles:F2} Miles, With a Speed of: {speedInMPH:F2} MPH, With a Pace of: {paceInMinutesPerMile:F2} min/Mile";
     }
-
-
-    
-
-
-
-
-
-
 }
