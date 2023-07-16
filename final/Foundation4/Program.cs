@@ -4,6 +4,7 @@ public class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
         List<Activity> activities = new List<Activity>();
 
         // Create activities and add them to the list
